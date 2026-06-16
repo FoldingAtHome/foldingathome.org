@@ -68,17 +68,16 @@
 
 <p>Download the <code>fah-client_*.deb</code> package and install it:</p>
 
-<pre><code>sudo dpkg -i fah-client_*.deb
-sudo apt-get install -f   # pulls in any missing dependencies</code></pre>
+<pre><code>sudo apt install ./fah-client_*.deb</code></pre>
 
 <p>The client runs as a systemd service named <code>fah-client</code> after install. You can check its status with <code>systemctl status fah-client</code>.</p>
 
 <h3>Linux (Fedora / RHEL / openSUSE)</h3>
 
-<p>Download the <code>fah-client-*.rpm</code> package and install it:</p>
+<p>Download the <code>fah_client-*.rpm</code> package and install it:</p>
 
-<pre><code>sudo dnf install ./fah-client-*.rpm        # Fedora / RHEL
-sudo zypper install ./fah-client-*.rpm     # openSUSE</code></pre>
+<pre><code>sudo dnf install ./fah_client-*.rpm        # Fedora / RHEL
+sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
 
 <p>Same as Debian/Ubuntu, the client runs as a systemd service named <code>fah-client</code> after install.</p>
 
