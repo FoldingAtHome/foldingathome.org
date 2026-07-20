@@ -64,22 +64,24 @@
   <li>Copy the Web Control URL shown on the installer's last panel into a browser <em>other than Safari</em> — Safari blocks the local connection Web Control needs to talk to the client.</li>
 </ul>
 
-<h3>Linux (Debian / Ubuntu)</h3>
+<h3>Linux</h3>
+
+<p>Download the appropriate package for your distribution and install it. For upgrades, use the same commands. Client versions older than v8 will be automatically removed.</p>
+
+<h4>Debian / Ubuntu</h4>
 
 <p>Download the <code>fah-client_*.deb</code> package and install it:</p>
 
 <pre><code>sudo apt install ./fah-client_*.deb</code></pre>
 
-<p>The client runs as a systemd service named <code>fah-client</code> after install. You can check its status with <code>systemctl status fah-client</code>.</p>
-
-<h3>Linux (Fedora / RHEL / openSUSE)</h3>
+<h4>Fedora / RHEL / openSUSE</h4>
 
 <p>Download the <code>fah_client-*.rpm</code> package and install it:</p>
 
 <pre><code>sudo dnf install ./fah_client-*.rpm        # Fedora / RHEL
 sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
 
-<p>Same as Debian/Ubuntu, the client runs as a systemd service named <code>fah-client</code> after install.</p>
+<p>The client runs as a systemd service named <code>fah-client</code> after install. You can check its status with <code>systemctl status fah-client</code>.</p>
 
 <h3>Headless or server installs</h3>
 
