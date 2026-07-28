@@ -108,7 +108,7 @@ const scienceGroups: Group[] = [
 const statisticsGroups: Group[] = [
   { title: 'Statistics', items: [
     { href: 'https://stats.foldingathome.org/donors',  label: 'Donor Statistics',   external: true },
-    { href: 'https://stats.foldingathome.org/teams',   label: 'Team Statistics',    external: true },
+    { href: 'https://stats.foldingathome.org/team',   label: 'Team Statistics',    external: true },
     { href: 'https://stats.foldingathome.org/os',      label: 'Client Statistics',  external: true },
     { href: 'https://stats.foldingathome.org/project', label: 'Project Statistics', external: true },
   ] },
