@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
     const date = a.published || a.created || new Date().toISOString()
     const title = (a.title || a.slug).trim()
     const description = (a.excerpt?.trim()) || stripHtml(a.body || '').slice(0, 500)
-    const author = a.author_name || ''
+    const author = a.author || ''
     return `    <item>
       <title>${xmlEscape(title)}</title>
       <link>${xmlEscape(url)}</link>

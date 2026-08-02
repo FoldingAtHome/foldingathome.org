@@ -16,7 +16,7 @@ article.post(v-if="article")
   header
     h1 {{ article.title || article.slug }}
     time(:datetime="article.published || article.created") {{ new Date(article.published || article.created).toLocaleDateString() }}
-    p.byline(v-if="article.author_name") by {{ article.author_name }}
+    p.byline(v-if="article.author") by {{ article.author }}
   .body(v-if="article.body" v-html="article.body")
 </template>
 

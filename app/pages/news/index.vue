@@ -28,7 +28,7 @@ section.news
             NuxtLink(:to="`/news/${a.slug}`") {{ a.title || a.slug }}
           .meta
             time(:datetime="a.published || a.created") {{ formatDate(a.published || a.created) }}
-            span.author(v-if="a.author_name") &nbsp;by {{ a.author_name }}
+            span.author(v-if="a.author") &nbsp;by {{ a.author }}
         NuxtLink.thumb(v-if="a.hero" :to="`/news/${a.slug}`")
           img(:src="assetUrl(a.hero)" alt="")
         .summary
