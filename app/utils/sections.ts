@@ -82,6 +82,7 @@ const supportGroups: Group[] = [
       { to: '/faq/running',         label: 'Running Folding@home' },
       { to: '/faq/troubleshooting', label: 'Troubleshooting' },
       { to: '/faq/stats',           label: 'Points, stats & passkey' },
+      { to: '/faq/teams',           label: 'Teams' },
       { to: '/faq/rules',           label: 'Rules & safety' },
       { to: '/faq/donation',        label: 'Donations' },
     ] },

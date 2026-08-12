@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SECTION_OVERRIDES, groupsFromOverride, type Group } from '~/utils/sections'
+import { renderWithToc } from '~/utils/toc'
 
 // Page bodies + metadata loaded from content/pages/ at build time. Each
 // page is its own dir with index.html (body) and meta.json (title, dates).
@@ -28,6 +29,10 @@ const meta = metas[`../../content/pages/${fetchSlug}/meta.json`]
 if (!body || !meta)
   throw createError({ statusCode: 404, statusMessage: 'Not found' })
 
+// Give headings ids and expand any `<nav data-toc></nav>` marker into a
+// Contents list. Bodies without the marker pass through unchanged.
+const rendered = renderWithToc(body)
+
 const sidebarGroups = computed<Group[]>(() => {
   const override = SECTION_OVERRIDES[sectionRoot]
   return override?.length ? groupsFromOverride(override) : []
@@ -44,7 +49,7 @@ useHead({ title: meta.title })
   article.page
     header
       h1 {{ meta.title || slug }}
-    .body(v-html="body")
+    .body(v-html="rendered")
 </template>
 
 <style lang="stylus" scoped>

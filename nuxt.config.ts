@@ -24,10 +24,11 @@ const apiUrl = process.env.NUXT_PUBLIC_API_URL || 'https://api.foldingathome.org
 const rewriteContentAssets = () => ({
   name: 'rewrite-content-asset-urls',
   enforce: 'pre' as const,
-  load(id: string) {
+  load(this: { addWatchFile(id: string): void }, id: string) {
     const [file, query] = id.split('?')
     if (!query?.includes('raw') || !/[\\/]content[\\/]pages[\\/].*\.html$/.test(file))
       return
+    this.addWatchFile(file) // else edits to content HTML don't hot-reload in dev
     const html = readFileSync(file, 'utf8')
       .replace(/\/assets\/([a-f0-9-]{36})/gi, (_m, uuid) => `${apiUrl}/asset/${uuid}/web`)
     return `export default ${JSON.stringify(html)}`

@@ -4,24 +4,7 @@
 
 <p>If you've never installed Folding@home before, start with <a href="/faq/getting-started">getting started</a> for a high-level overview, then come back here for the v8.5-specific details.</p>
 
-<h2 id="contents">Contents</h2>
-
-<ul>
-  <li><a href="#whats-new">What's new in v8.5</a></li>
-  <li><a href="#changes-from-v7">Changes from v7</a></li>
-  <li><a href="#download">Downloading the software</a></li>
-  <li><a href="#install">Installation</a></li>
-  <li><a href="#web-control">Using Web Control</a></li>
-  <li><a href="#machines-page">The Machines page</a></li>
-  <li><a href="#machine-settings">Machine settings</a></li>
-  <li><a href="#stats-page">The Stats page</a></li>
-  <li><a href="#projects-news">Projects and News</a></li>
-  <li><a href="#log-viewer">The Log Viewer</a></li>
-  <li><a href="#viewer-3d">The 3D Protein Viewer</a></li>
-  <li><a href="#dark-mode">Dark Mode</a></li>
-  <li><a href="#help">Getting help</a></li>
-  <li><a href="#open-source">Open-source contribution</a></li>
-</ul>
+<nav data-toc></nav>
 
 <h2 id="whats-new">What's new in v8.5</h2>
 
@@ -109,7 +92,7 @@ sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
 
 <p>Once you're logged in, the user icon in the top right opens your account settings, and every machine you've connected to the account appears on the Machines page.</p>
 
-<h3>Account settings</h3>
+<h3 id="account-settings">Account settings</h3>
 
 <figure class="aligncenter size-large"><img src="/assets/6351552e-eae4-470f-a441-4687a6e22072" alt="Account settings screen with Username, Team, Passkey, Cause, Node and Token fields"/><figcaption>Account settings.</figcaption></figure>
 
@@ -122,6 +105,16 @@ sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
 <p>For changes to take effect, click the <img src="/assets/56852f9d-f5b6-4e9c-b4e5-9c4281645114" alt="Save" style="width:100px;vertical-align:middle"/> button in the top right. The <img src="/assets/a38f8441-b66d-4dd1-864e-1168485d794c" alt="Cancel" style="width:100px;vertical-align:middle"/> button discards unsaved changes.</p>
 
 <p>The <strong>Machines</strong> section lets you manage and configure your machines, including disconnecting them from your account. Changes take effect immediately. <strong>Warning:</strong> disconnecting a machine makes it inaccessible from your account — a manual reconnection is required to bring it back.</p>
+
+<h3 id="managing-teams">Creating and managing teams</h3>
+
+<p>The <strong>Teams</strong> tab lists the teams you've created, each with buttons to edit or delete it. A team pools the points of everyone folding under its team number; see <a href="/faq/teams">Teams</a> for what teams are and how to join one.</p>
+
+<figure class="aligncenter size-large"><img src="/assets/65164578-faa1-4d94-9e06-7e9a7450c309" alt="The Teams tab in Account Settings, listing your teams with edit and delete actions and a New Team button"/><figcaption>The Teams tab in Account Settings.</figcaption></figure>
+
+<p>Click <strong>New Team</strong> to open the Create Team dialog. Give the team a <strong>Name</strong>, and optionally a home-page <strong>URL</strong> and a <strong>Logo</strong> image, then click <strong>Create Team</strong>. You'll be assigned a team number to share with anyone you want to recruit — they join by entering it as their <strong>Team</strong> (see <a href="/faq/teams">Teams</a>).</p>
+
+<figure class="aligncenter size-large"><img src="/assets/77fa93e5-7c52-41fe-822f-7b5624042d23" alt="The Create Team dialog with Name, URL, and Logo fields and a Create Team button"/><figcaption>Creating a new team.</figcaption></figure>
 
 <h3 id="connecting-machines">Connecting machines to your account</h3>
 
@@ -163,7 +156,7 @@ sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
 
 <p>Click the gear icon on a machine to open its per-machine settings. Note: when you're not logged into an account, this screen also includes the account fields (username, team, passkey) because there's no global account-settings page to put them on.</p>
 
-<h3>Scheduling</h3>
+<h3 id="scheduling">Scheduling</h3>
 
 <p>Controls when folding actually runs:</p>
 
@@ -173,13 +166,13 @@ sudo zypper in ./fah_client-*.rpm          # openSUSE</code></pre>
   <li><strong>Keep Awake</strong> — prevent the machine from going to sleep so folding can continue.</li>
 </ul>
 
-<h3>Resource usage</h3>
+<h3 id="resource-usage">Resource usage</h3>
 
 <p>The <strong>CPUs</strong> slider sets how many CPU cores Folding@home is allowed to use. You can change it at any time, but setting it too low while a WU is already running may cause that WU to fail — pause first if you want to drop the count significantly.</p>
 
 <p>The <strong>GPUs</strong> section lists every supported GPU on your machine, each with its own enable/disable checkbox. GPU folding is much more efficient than CPU folding and usually earns substantially more points; if you don't want a particular GPU folding (say, the one your monitor is plugged into), uncheck it here. See <a href="/faq/troubleshooting">troubleshooting</a> if your GPU isn't being detected.</p>
 
-<h3>Advanced</h3>
+<h3 id="advanced">Advanced</h3>
 
 <figure class="aligncenter size-large"><img src="/assets/2229baba-7ff4-41a4-8e6f-63a24f367605" alt="Machine settings in advanced mode, showing Beta Projects toggle, Project Key, and Resource Groups options"/><figcaption>Machine settings in Advanced Mode.</figcaption></figure>
 
