@@ -44,7 +44,7 @@ export const TOP_NAV: NavSection[] = [
   ] },
 
   { label: 'Statistics', href: '/statistics', children: [
-    { label: 'Donor',   href: 'https://stats.foldingathome.org/donors',  external: true },
+    { label: 'Donor',   href: 'https://stats.foldingathome.org/donor',   external: true },
     { label: 'Team',    href: 'https://stats.foldingathome.org/teams',   external: true },
     { label: 'Client',  href: 'https://stats.foldingathome.org/os',      external: true },
     { label: 'Project', href: 'https://stats.foldingathome.org/project', external: true },
