@@ -4,4 +4,5 @@
   main
     slot
   SiteFooter
+  CookieConsent
 </template>

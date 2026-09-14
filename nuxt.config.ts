@@ -42,7 +42,17 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image'],
 
   runtimeConfig: {
-    public: { apiUrl },
+    public: {
+      apiUrl,
+      // Google Tag Manager. Empty = disabled (no scripts injected). Set per
+      // deployment; the same id can be reused across *.foldingathome.org so
+      // all subdomains report into one GA4 property.
+      gtmId: process.env.NUXT_PUBLIC_GTM_ID || '',
+      // Domain for the consent cookie. Set to `.foldingathome.org` in
+      // production so one accept/reject choice is shared across subdomains.
+      // Leave empty in dev (host-only cookie, works on localhost).
+      consentCookieDomain: process.env.NUXT_PUBLIC_CONSENT_COOKIE_DOMAIN || '',
+    },
   },
 
   // Hybrid rendering: filesystem-backed pages are prerendered at build
