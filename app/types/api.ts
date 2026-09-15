@@ -14,7 +14,7 @@ export interface ArticleListItem {
   created: string
   updated: string
   author_id?: number | null
-  author_name?: string | null
+  author?: string | null
 }
 
 export interface Article extends ArticleListItem {
