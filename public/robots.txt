@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# The Directus admin lives on a separate subdomain (admin.foldingathome.org)
-# but block any accidentally-exposed admin/preview paths just in case.
-Disallow: /admin
-Disallow: /api/
-
 Sitemap: https://foldingathome.org/sitemap.xml

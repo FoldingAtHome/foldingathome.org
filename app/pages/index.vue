@@ -162,7 +162,7 @@ section.tech
     .copy
       h2.section-title Already a power user?
       p
-        | Bring your GPU. #[a(href="https://stats.foldingathome.org/teams" rel="noopener") Join a team] or #[a(href="https://app.foldingathome.org/" rel="noopener") start one]. Climb the #[a(href="https://stats.foldingathome.org/donors" rel="noopener") leaderboard]. Folding@home has supported competitive teams since 2000, with full #[NuxtLink(to="/statistics") stats], project transparency, and an #[a(href="https://github.com/FoldingAtHome" rel="noopener") open client].
+        | Bring your GPU. #[a(href="https://stats.foldingathome.org/team" rel="noopener") Join a team] or #[a(href="https://app.foldingathome.org/" rel="noopener") start one]. Climb the #[a(href="https://stats.foldingathome.org/donor" rel="noopener") leaderboard]. Folding@home has supported competitive teams since 2000, with full #[NuxtLink(to="/statistics") stats], project transparency, and an #[a(href="https://github.com/FoldingAtHome" rel="noopener") open client].
       ul.links
         li
           NuxtLink(to="/statistics") Live stats

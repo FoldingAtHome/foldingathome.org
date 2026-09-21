@@ -108,17 +108,16 @@ const scienceGroups: Group[] = [
 
 const statisticsGroups: Group[] = [
   { title: 'Statistics', items: [
-    { href: 'https://stats.foldingathome.org/donors',  label: 'Donor Statistics',   external: true },
-    { href: 'https://stats.foldingathome.org/teams',   label: 'Team Statistics',    external: true },
+    { href: 'https://stats.foldingathome.org/donor',   label: 'Donor Statistics',   external: true },
+    { href: 'https://stats.foldingathome.org/team',    label: 'Team Statistics',    external: true },
     { href: 'https://stats.foldingathome.org/os',      label: 'Client Statistics',  external: true },
     { href: 'https://stats.foldingathome.org/project', label: 'Project Statistics', external: true },
   ] },
   { title: 'Links', items: [
-    { href: 'https://apps.foldingathome.org/psummary.html',              label: 'Project Summary',                  external: true },
-    { href: 'https://apps.foldingathome.org/serverstats',                label: 'Server Status',                    external: true },
-    { href: 'https://apps.foldingathome.org/daily_user_summary.txt.bz2', label: 'Donor list (txt)',                 external: true },
-    { href: 'https://apps.foldingathome.org/daily_team_summary.txt.bz2', label: 'Team list (txt)',                  external: true },
-    { href: 'https://apps.foldingathome.org/psummary.json',              label: 'Project Summary (JSON)',           external: true },
+    { href: 'https://stats.foldingathome.org/server',                    label: 'Server Status',     external: true },
+    { href: 'https://apps.foldingathome.org/daily_user_summary.txt.bz2', label: 'Donor list (txt)',  external: true },
+    { href: 'https://apps.foldingathome.org/daily_team_summary.txt.bz2', label: 'Team list (txt)',   external: true },
+    { href: 'https://api.foldingathome.org/',                            label: 'Public API (JSON)', external: true },
   ] },
 ]
 
