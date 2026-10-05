@@ -109,15 +109,20 @@ section.news
     font-style italic
 
 .thumb
-  display block
+  display flex
+  justify-content center
+  align-self flex-start
+  width fit-content
+  max-width min(260px, 100%)
+  height 200px
+  overflow hidden
   margin 0 0 0.75rem
 
   img
     display block
-    width 100%
-    max-width 260px
-    max-height 200px
-    height auto
+    flex-shrink 0
+    height 100%
+    width auto
 
 .summary p
   margin 0 0 0.75rem
